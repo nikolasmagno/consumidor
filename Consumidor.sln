@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros", "src\Ouroboros\Ouroboros.csproj", "{A0A8B04D-807C-4A99-91CD-D8B135416DAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumidor", "src\Ouroboros\Consumidor.csproj", "{A0A8B04D-807C-4A99-91CD-D8B135416DAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Sample", "src\Sample\Ouroboros.Sample\Ouroboros.Sample.csproj", "{8A940B2E-1E02-488A-94B5-E59B73E8C20B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumidor.Sample", "src\Sample\Ouroboros.Sample\Consumidor.Sample.csproj", "{8A940B2E-1E02-488A-94B5-E59B73E8C20B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

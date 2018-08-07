@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ouroboros.Sample
+namespace Consumidor.Sample
 {
     class Consumer : IConsumer<int>
     {

@@ -1,11 +1,10 @@
-﻿using Ouroboros;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ouroboros.Sample
+namespace Consumidor.Sample
 {
     class Program
     {
@@ -21,7 +20,7 @@ namespace Ouroboros.Sample
                 new Consumer { Id = "Consumer 5" },
             };
 
-            var service = new Ouroboros.Service<int>(producer, consumers);
+            var service = new Service<int>(producer, consumers);
             service.ProducerRefreshTimes = 2;
             service.Start();
 

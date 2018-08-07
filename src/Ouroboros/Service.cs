@@ -1,4 +1,4 @@
-﻿using Ouroboros.Exceptions;
+﻿using Consumidor.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Ouroboros
+namespace Consumidor
 {
     public class Service<T>
     {

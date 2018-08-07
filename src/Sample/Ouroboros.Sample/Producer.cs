@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ouroboros.Sample
+namespace Consumidor.Sample
 {
     class Producer : IProducer<int>
     {

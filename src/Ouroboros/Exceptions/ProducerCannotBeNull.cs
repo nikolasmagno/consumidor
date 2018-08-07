@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ouroboros.Exceptions
+namespace Consumidor.Exceptions
 {
     public class ProducerCannotBeNull : Exception
     {
