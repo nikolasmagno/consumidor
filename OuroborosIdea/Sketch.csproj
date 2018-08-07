@@ -7,8 +7,8 @@
     <ProjectGuid>{17AA8A2C-37F3-47B8-B828-30B80B13342E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InitialIdea</RootNamespace>
-    <AssemblyName>InitialIdea</AssemblyName>
+    <RootNamespace>Ouroboros.Sketch</RootNamespace>
+    <AssemblyName>Ouroboros.Sketch</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InitialIdea
+namespace Ouroboros.Sketch
 {
     public class Produtor
     {
