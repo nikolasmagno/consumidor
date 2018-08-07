@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sketch", "OuroborosIdea\Ske
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros", "src\Ouroboros\Ouroboros.csproj", "{A0A8B04D-807C-4A99-91CD-D8B135416DAC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Ouroboros.Sample", "src\Sample\Ouroboros.Sample\Ouroboros.Sample.csproj", "{8A940B2E-1E02-488A-94B5-E59B73E8C20B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A0A8B04D-807C-4A99-91CD-D8B135416DAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0A8B04D-807C-4A99-91CD-D8B135416DAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0A8B04D-807C-4A99-91CD-D8B135416DAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A940B2E-1E02-488A-94B5-E59B73E8C20B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A940B2E-1E02-488A-94B5-E59B73E8C20B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A940B2E-1E02-488A-94B5-E59B73E8C20B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A940B2E-1E02-488A-94B5-E59B73E8C20B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

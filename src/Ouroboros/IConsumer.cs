@@ -8,6 +8,7 @@ namespace Ouroboros
 {
     public interface IConsumer<T>
     {
+        string Id { get; set; }
         void Process<T>(T item);
     }
 }
