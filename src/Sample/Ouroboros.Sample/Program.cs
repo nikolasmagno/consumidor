@@ -18,16 +18,20 @@ namespace Ouroboros.Sample
                 new Consumer { Id = "Consumer 2" },
                 new Consumer { Id = "Consumer 3" },
                 new Consumer { Id = "Consumer 4" },
+                new Consumer { Id = "Consumer 5" },
             };
 
             var service = new Ouroboros.Service<int>(producer, consumers);
             service.Start();
 
             Console.WriteLine("Press something to stop producer");
+            Console.ReadLine();
             service.ProducerCancelationTokenSource.Cancel();
 
             Console.WriteLine("Press something to stop consumers");
+            Console.ReadLine();
             service.ConsumerCancelationTokenSource.Cancel();
+            Console.WriteLine("Done!");
             Console.ReadKey();
         }
     }
