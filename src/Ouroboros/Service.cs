@@ -72,7 +72,7 @@ namespace Ouroboros
 
         private void ProducerRefreshRecurrent()
         {
-            while (!ProducerCancelationTokenSource.Token.IsCancellationRequested || ProducerRefreshTimes == 0)
+            while (!ProducerCancelationTokenSource.Token.IsCancellationRequested && ProducerRefreshTimes != 0)
             {
                 _producer.RefreshCollection();
                 DecreaseRefreshTime();
@@ -84,7 +84,7 @@ namespace Ouroboros
         private void DecreaseRefreshTime()
         {
             if (ProducerRefreshTimes.HasValue)
-                ProducerRefreshTimes--;
+                 ProducerRefreshTimes --;
         }
 
         private void InitializeConsumers()

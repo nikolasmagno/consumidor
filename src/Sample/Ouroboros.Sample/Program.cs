@@ -22,6 +22,7 @@ namespace Ouroboros.Sample
             };
 
             var service = new Ouroboros.Service<int>(producer, consumers);
+            service.ProducerRefreshTimes = 2;
             service.Start();
 
             Console.WriteLine("Press something to stop producer");
