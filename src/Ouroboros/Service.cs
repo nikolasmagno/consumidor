@@ -20,19 +20,39 @@ namespace Ouroboros
 
         public CancellationTokenSource ConsumerCancelationTokenSource { get; set; }
         public CancellationTokenSource ProducerCancelationTokenSource { get; set; }
-
         /// <summary>
         /// Milliseconds between consumer request
         /// </summary>
         public int ConsumerIntervalDelay { get; set; }
 
+        /// <summary>
+        /// Producer refresh interval delay in milliseconds
+        /// </summary>
         public int ProducerRefreshIntervalDelay { get; set; }
+        /// <summary>
+        /// Number of times the refresh producer will be called
+        /// null means it'll be called indefinetlly
+        /// </summary>
         public int? ProducerRefreshTimes { get; set; }
+
+        /// <summary>
+        /// Means if a error ocorrer on consumer process a exception will be throw
+        /// Default value is true
+        /// </summary>
+        public bool ThrowExceptionOnConsumerError { get; set; }
+        /// <summary>
+        /// Means if a error ocorrer on consumer process the item will be returned to queue
+        /// Default value is true
+        /// </summary>
+        public bool ReturnToQueueOnError { get; set; }
 
         public Service(IProducer<T> producer, IEnumerable<IConsumer<T>> consumers)
         {
             ProducerInitialize(producer);
             ConsumerInitialize(consumers);
+
+            ThrowExceptionOnConsumerError = true;
+            ReturnToQueueOnError = true;
         }
 
         private void ProducerInitialize(IProducer<T> producer)
@@ -84,7 +104,7 @@ namespace Ouroboros
         private void DecreaseRefreshTime()
         {
             if (ProducerRefreshTimes.HasValue)
-                 ProducerRefreshTimes --;
+                ProducerRefreshTimes--;
         }
 
         private void InitializeConsumers()
@@ -97,15 +117,27 @@ namespace Ouroboros
 
         private void Dequeue(IConsumer<T> consumer, IProducer<T> producer)
         {
-            T item;
+            T item = default(T);
+
             while (!ConsumerCancelationTokenSource.Token.IsCancellationRequested)
             {
-                if (producer.Collection.TryDequeue(out item))
-                    consumer.Process(item);
-                else
-                    Console.WriteLine($"Consumer {consumer.Id} has nothing to process");
+                try
+                {
+                    if (producer.Collection.TryDequeue(out item))
+                        consumer.Process(item);
+                    else
+                        Console.WriteLine($"Consumer {consumer.Id} has nothing to process");
 
-                Thread.Sleep(ConsumerIntervalDelay);
+                    Thread.Sleep(ConsumerIntervalDelay);
+                }
+                catch
+                {
+                    if (ReturnToQueueOnError || EqualityComparer<T>.Default.Equals(item, default(T)))
+                        producer.Collection.Enqueue(item);
+
+                    if (ThrowExceptionOnConsumerError)
+                        throw;
+                }
             }
         }
     }
