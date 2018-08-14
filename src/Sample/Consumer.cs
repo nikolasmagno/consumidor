@@ -10,6 +10,6 @@ namespace Consumidor.Sample
     {
         public string Id { get; set; }
 
-        public void Process<T>(T item) => Console.WriteLine($"Consumer {Id} - processing item {item}");
+        public void Process(int item) => Console.WriteLine($"Consumer {Id} - processing item {item}");
     }
 }

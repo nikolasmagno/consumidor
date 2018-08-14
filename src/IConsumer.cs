@@ -9,6 +9,6 @@ namespace Consumidor
     public interface IConsumer<T>
     {
         string Id { get; set; }
-        void Process<T>(T item);
+        void Process(T item);
     }
 }
