@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaseProducer.cs" />
     <Compile Include="Exceptions\ProducerCollectionCannotBeNull.cs" />
     <Compile Include="Exceptions\ProducerCannotBeNull.cs" />
     <Compile Include="IConsumer.cs" />

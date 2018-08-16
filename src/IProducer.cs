@@ -10,6 +10,7 @@ namespace Consumidor
     public interface IProducer<T>
     {
         ConcurrentQueue<T> Collection { get; set; }
+        IList<T> Processing { get; set; }
         void RefreshCollection();
     }
 }

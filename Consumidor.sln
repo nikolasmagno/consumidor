@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumidor", "src\Consumidor.csproj", "{A0A8B04D-807C-4A99-91CD-D8B135416DAC}"
 EndProject
@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Consumidor.Sample", "src\Sa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BE7C8FC8-46CE-4EE9-A52B-667478502FB4}"
 	ProjectSection(SolutionItems) = preProject
-		Consumidor.1.0.0.nuspec = Consumidor.1.0.0.nuspec
+		Consumidor.nuspec = Consumidor.nuspec
 	EndProjectSection
 EndProject
 Global
@@ -29,5 +29,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {028778C6-B5D8-42EB-8C7F-D345C3740876}
 	EndGlobalSection
 EndGlobal

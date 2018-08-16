@@ -124,7 +124,11 @@ namespace Consumidor
                 try
                 {
                     if (producer.Collection.TryDequeue(out item))
+                    {
+                        producer.Processing.Add(item);
                         consumer.Process(item);
+                        producer.Processing.Remove(item);
+                    }
                     else
                         Console.WriteLine($"Consumer {consumer.Id} has nothing to process");
 
@@ -134,6 +138,8 @@ namespace Consumidor
                 {
                     if (ReturnToQueueOnError || EqualityComparer<T>.Default.Equals(item, default(T)))
                         producer.Collection.Enqueue(item);
+
+                    producer.Processing.Remove(item);
 
                     if (ThrowExceptionOnConsumerError)
                         throw;

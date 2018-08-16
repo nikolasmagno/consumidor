@@ -7,16 +7,13 @@ using System.Threading.Tasks;
 
 namespace Consumidor.Sample
 {
-    class Producer : IProducer<int>
+    class Producer : BaseProducer<int>
     {
         public Producer()
         {
-            Collection = new ConcurrentQueue<int>();
         }
 
-        public ConcurrentQueue<int> Collection { get; set; }
-
-        public void RefreshCollection()
+        public override void RefreshCollection()
         {
             for (int i = 0; i < 15; i++)
                 Collection.Enqueue(i);
