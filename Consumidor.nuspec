@@ -11,7 +11,7 @@
     <projectUrl>https://github.com/nikolasmagno/consumidor</projectUrl>
     <description>It's a library to give a simple away for implement producer and consumer pattern. Allowing the complex away from your code and time to focus in your task. All consumers and producer will run in a separate task, doing concurrency management for you.</description>
     <summary>A simple library to implements producer-consumer pattern</summary>
-    <releaseNotes>First Release</releaseNotes>
+    <releaseNotes>Adding a processing list and creating a baseclass to make a producer implementation easy.</releaseNotes>
     <tags>producer consumer produtor consumidor queue pattern</tags>
   </metadata>
   <files>
