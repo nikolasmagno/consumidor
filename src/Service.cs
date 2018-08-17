@@ -84,11 +84,7 @@ namespace Consumidor
                 throw new ProducerCollectionCannotBeNull();
         }
 
-        private void ProducerRefresh()
-        {
-            _producer.RefreshCollection();
-            new Task(() => ProducerRefreshRecurrent()).Start();
-        }
+        private void ProducerRefresh() => new Task(() => ProducerRefreshRecurrent()).Start();
 
         private void ProducerRefreshRecurrent()
         {
