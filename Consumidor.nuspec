@@ -2,14 +2,14 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Consumidor</id>
-    <version>2.0.1</version>
+    <version>3.0.0</version>
     <title>Consumidor</title>
     <authors>nikolas magno</authors>
     <owners>nikolas magno</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://creativecommons.org/licenses/by/4.0/</licenseUrl>
     <projectUrl>https://github.com/nikolasmagno/consumidor</projectUrl>
-    <description>It's a library to give a simple away for implement producer and consumer pattern. Allowing the complex away from your code and time to focus in your task. All consumers and producer will run in a separate task, doing concurrency management for you.</description>
+    <description>It's a library to give a simple way for implement producer and consumer pattern. Allowing the complex away from your code and time to focus in your task. All consumers and producer will run in a separate task, doing concurrency management for you.</description>
     <summary>A simple library to implements producer-consumer pattern</summary>
     <releaseNotes>Adding a processing list and creating a baseclass to make a producer implementation easy.</releaseNotes>
     <tags>producer consumer produtor consumidor queue pattern</tags>
