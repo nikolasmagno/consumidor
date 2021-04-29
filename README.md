@@ -6,7 +6,7 @@
 * [Usage](#usage)
 
 ## Overview
-It's a library to give a simple away for implement producer and consumer pattern. Allowing the complex away from your code and time to focus in your task. All consumers and producer will run in a separate task, doing concurrency management for you.
+It's a library to give a simple way for implement producer and consumer pattern. Allowing the complex away from your code and time to focus in your task. All consumers and producer will run in a separate task, doing concurrency management for you.
 
 ## Usage
 ### Producer
